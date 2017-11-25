@@ -8,6 +8,7 @@ buildscript {
     repositories {
         mavenCentral()
         jcenter()
+        maven { url "http://dl.bintray.com/kotlin/kotlin-eap-1.2" }
     }
 
     dependencies {
@@ -21,16 +22,20 @@ buildscript {
 repositories {
     mavenCentral()
     jcenter()
+    maven { url "http://dl.bintray.com/kotlin/kotlin-eap-1.2" }
 }
 
 dependencies {
-    compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
-    compile "org.jetbrains.kotlin:kotlin-reflect:$kotlin_version"
+    compile "org.jetbrains.kotlin:kotlin-stdlib:1.0.7"
+    compile "org.jetbrains.kotlin:kotlin-reflect:1.0.7"
     compile "org.mockito:mockito-core:2.12.0"
 
     /* Tests */
     testCompile "junit:junit:4.12"
     testCompile "com.nhaarman:expect.kt:0.6.2"
+
+    testCompile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    testCompile "org.jetbrains.kotlin:kotlin-reflect:$kotlin_version"
 }
 
 dokka {
